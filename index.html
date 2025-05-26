@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Rohit Binu – Personal Site</title>
+
+  <!-- JetBrains Mono from Google Fonts -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+    /* -- Darcula Base -- */
+    body {
+      background-color: #2B2B2B;
+      color: #A9B7C6;
+      font-family: 'JetBrains Mono', monospace;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #515151;
+      padding-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      color: #FFC66D;            /* class names */
+    }
+
+    /* About */
+    #about p {
+      margin-bottom: 3rem;
+      color: #A9B7C6;            /* default text */
+    }
+
+    /* Section titles */
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #CC7832;            /* keywords */
+      border-bottom: 1px solid #515151;
+      padding-bottom: 0.3rem;
+    }
+
+    /* Links */
+    a {
+      color: #589DF6;            /* link color */
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* project-card component */
+    project-card {
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+    project-card .card {
+      background-color: #313335; /* panel background */
+      border: 1px solid #515151; /* panel border */
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    }
+    project-card .card h3 {
+      margin-top: 0;
+      color: #629755;            /* strings */
+    }
+    project-card .description {
+      color: #A9B7C6;
+      margin: 0.5rem 0 1rem;
+    }
+    project-card .skills-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    project-card .skills-list li {
+      background-color: #3C3F41; /* badge bg */
+      border: 1px solid #515151;
+      border-radius: 4px;
+      padding: 0.3rem 0.6rem;
+      font-size: 0.9rem;
+      color: #A9B7C6;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Rohit Binu</h1>
+  </header>
+
+  <section id="about">
+    <p>
+      Hi—I’m <strong>Rohit Binu</strong>, a final year computer-science student and junior software
+      engineer based in Noord Brabant. I'm passionate about creating software solutions to real world problems.
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <project-card
+      name="Portfolio Website"
+      skills="HTML, CSS, JavaScript"
+      description="A responsive site built from scratch to showcase my work."
+    ></project-card>
+
+    <project-card
+      name=""
+      skills="Python, Pandas, MongoDB"
+      description="Processed ~6M tweets to extract insights on user behavior."
+    ></project-card>
+
+    <!-- Add more <project-card>…> here as needed -->
+  </section>
+
+  <script>
+    const template = document.createElement('template');
+    template.innerHTML = `
+      <div class="card">
+        <h3 class="title"></h3>
+        <p class="description"></p>
+        <ul class="skills-list"></ul>
+      </div>
+    `;
+
+    class ProjectCard extends HTMLElement {
+      constructor() {
+        super();
+        const shadow = this.attachShadow({ mode: 'open' });
+        shadow.appendChild(template.content.cloneNode(true));
+        this._titleEl = shadow.querySelector('.title');
+        this._descEl = shadow.querySelector('.description');
+        this._skillsEl = shadow.querySelector('.skills-list');
+      }
+
+      connectedCallback() {
+        const name = this.getAttribute('name') || 'Untitled';
+        const desc = this.getAttribute('description') || '';
+        const skills = (this.getAttribute('skills') || '')
+          .split(',')
+          .map(s => s.trim())
+          .filter(s => s);
+
+        this._titleEl.textContent = name;
+        this._descEl.textContent = desc;
+        this._skillsEl.innerHTML = skills
+          .map(skill => `<li>${skill}</li>`)
+          .join('');
+      }
+    }
+
+    customElements.define('project-card', ProjectCard);
+  </script>
+</body>
+</html>
