@@ -73,6 +73,12 @@
       margin-top: 0;
       color: #629755;            /* strings */
     }
+    project-card .card .date {
+      color: #9876AA;            /* variables */
+      font-size: 0.9rem;
+      margin-top: -0.5rem;
+      margin-bottom: 0.5rem;
+    }
     project-card .description {
       color: #A9B7C6;
       margin: 0.5rem 0 1rem;
@@ -92,6 +98,43 @@
       font-size: 0.9rem;
       color: #A9B7C6;
     }
+    
+    /* Skills label */
+    project-card .skills-section {
+      margin-top: 0.5rem;
+    }
+    project-card .skills-label {
+      font-weight: bold;
+      color: #BBB529; /* annotation color */
+      margin-right: 0.5rem;
+    }
+    
+    /* Hide content */
+    .hidden {
+      display: none;
+    }
+    
+    /* Button styles */
+    .toggle-btn {
+      background-color: #3C3F41;
+      color: #A9B7C6;
+      border: 1px solid #515151;
+      border-radius: 4px;
+      padding: 0.7rem 1.2rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-bottom: 1.5rem;
+      width: 100%;
+    }
+    .toggle-btn:hover {
+      background-color: #515151;
+    }
+    .toggle-btn:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px #589DF6;
+    }
   </style>
 </head>
 <body>
@@ -108,15 +151,115 @@
 
   <section id="projects">
     <h2>Projects</h2>
+    <button id="toggleProjects" class="toggle-btn">Show My Projects</button>
+    
+    <div id="projectsContent" class="hidden">
+    
 
-    <project-card
-      name="Portfolio Website"
-      skills="HTML, CSS, JavaScript"
-      description="A responsive site built from scratch to showcase my work."
-    ></project-card>
+      <project-card
+        name="Portfolio Website"
+        date="May 2025 - Present"
+        skills="HTML, CSS, JavaScript"
+        description="A website built to showcase my professional work and technical skills."
+      ></project-card>
 
-   
-    <!-- Add more <project-card>…> here as needed -->
+      <project-card
+        name="BunqBibble: Travel Safety AI Agent"
+        date="May 2025"
+        skills="LangChain, llama-3_3-nemotron-super-49b, Flask, Expo, AI, RSS Integration, API Integration"
+        description="An AI agent that helps travelers stay safe in new cities by analyzing news feeds, HoodMaps data, and banking patterns. I collaborated with a team at the bunq AI Agent Hackathon to build this solution in 24 hours, focusing on the LangChain implementation and API integrations to provide reliable safety assessments for travelers worldwide."
+      ></project-card>
+      
+      <project-card
+        name="EduPilot DevOps"
+        date="March 2025 - Present"
+        skills="Docker, GitLab CI/CD, Linux, High-Performance Computing"
+        description="EduPilot is a large language model focused on education deployed on TU/e's High-Performance Cluster. I configured the Docker environment for the model and backend, set up the CI/CD pipeline using GitLab, and managed the deployment on the university's computing infrastructure."
+      ></project-card>
+
+      <project-card
+        name="PARA: JetBrains Plugin"
+        date="February 2025 - April 2025"
+        skills="Kotlin, IntelliJ Plugin SDK, Maven, Gradle, AI Agents, Git"
+        description="An IntelliJ IDEA plugin that automatically installs Java dependencies by analyzing code. I was involved in the development of the dependency identification system, helped created pipelines for Gradle integration, and via prompt engineering and strategic API usage implemented AI assistance to identify dependencies."
+      ></project-card>
+
+      <project-card
+        name="Transport and Logistics Game"
+        date="August 2024 - Present"
+        skills="PHP, Laravel, Blade, Bootstrap, HTML, SQL, Nginx, Plesk, Git"
+        description="A web-based simulation game for TU Eindhoven students to learn transport and logistics concepts. I developed the full stack implementation including user authentication, real-time communication features, PDF generation, and deployed the solution on Nginx via Plesk."
+      ></project-card>
+
+      <project-card
+        name="Iris: BIM Model Augmentation App"
+        date="November 2024"
+        skills="React Native, Expo, Python, Google Document AI, Git"
+        description="Built a cross-platform mobile app at Junction Hackathon 2024 that simplifies augmenting BIM models by taking photos of device labels and automatically extracting data using Google Document AI."
+      ></project-card>
+
+      <project-card
+        name="SimplyCon: Conference and Events App"
+        date="February 2024 - April 2024"
+        skills="Kotlin, JetPack Compose, Maps API, Git, Firebase"
+        description=" SimplyCon is an Android app for organizing and attending conferences. Users could create events, generate QR code tickets, and sell products. Built with Kotlin and Firebase."
+      ></project-card>
+
+     
+      <project-card
+        name="CreditClassroom: Financial Visualization Tool"
+        date="November 2023 - January 2024"
+        skills="Python, Dash, Plotly, Data Science"
+        description="CreditClassroom is a visualization tool to help students better understand personal finance. Created complex multi-variate visualizations using Python, Dash, and Plotly."
+      ></project-card>
+
+      <project-card
+        name="Pills2Go: Pill Dispenser Bracelet"
+        date="September 2023 - November 2023"
+        skills="Arduino C, MIT App Inventor, Bluetooth LE, Electronics"
+        description="Pills2Go is a pill dispensing bracelet built using an ESP32 microcontroller with Bluetooth connectivity to a smartphone app built using MIT App Inventor."
+      ></project-card>
+
+      <project-card
+        name="V5 Haptic Glove"
+        date="September 2023 - June 2024"
+        skills="Arduino C, KiCad, Software Architecture, Rust, GitHub Actions, CI/CD, Jira"
+        description="Developed the V5 haptic glove with a multidisciplinary team. The V5 Haptic glove allows for improved communication via haptics for specially abled people. I worked on the software architecture, CI/CD pipeline, and Rust firmware development."
+      ></project-card>
+
+      <project-card
+        name="AI for Endless Runner Game"
+        date="July 2023 - August 2023"
+        skills="Python, PyGame, NEAT Algorithm"
+        description="Trained an AI using the NEAT algorithm to play a 2D endless runner game based on Google Chrome's dinosaur game. The AI was trained over 1000 generations and can potentially play the game indefinitely."
+      ></project-card>
+
+      <project-card
+        name="Color-Sorting Robot"
+        date="April 2023 - June 2023"
+        skills="Python, MIT App Inventor, Robotics"
+        description="Built a robot that sorts plastic disks based on color, controlled via a custom mobile app designed using MIT App Inventor."
+      ></project-card>
+
+      <project-card
+        name="NOx and Wind Speed Correlation Study"
+        date="February 2023 - April 2023"
+        skills="Python, NumPy, Pandas, Data Analysis"
+        description="Conducted a study investigating correlation between NOx levels and wind speed using data from weather station NL10318. Created various plots and graphs to analyze potential relationships."
+      ></project-card>
+
+  
+
+      
+      <project-card
+        name="Java Banking Application"
+        date="June 2021 - December 2021"
+        skills="Java, Swing, File I/O, GUI Development"
+        description="Designed and built a banking application with a GUI interface using Java Swing. Implemented persistent data storage to maintain bank information across sessions."
+      ></project-card>
+      
+      <!-- Add more <project-card>…> here as needed -->
+    </div>
   </section>
 
   <script>
@@ -124,8 +267,12 @@
     template.innerHTML = `
       <div class="card">
         <h3 class="title"></h3>
+        <div class="date"></div>
         <p class="description"></p>
-        <ul class="skills-list"></ul>
+        <div class="skills-section">
+          <span class="skills-label">Skills used:</span>
+          <ul class="skills-list"></ul>
+        </div>
       </div>
     `;
 
@@ -135,12 +282,14 @@
         const shadow = this.attachShadow({ mode: 'open' });
         shadow.appendChild(template.content.cloneNode(true));
         this._titleEl = shadow.querySelector('.title');
+        this._dateEl = shadow.querySelector('.date');
         this._descEl = shadow.querySelector('.description');
         this._skillsEl = shadow.querySelector('.skills-list');
       }
 
       connectedCallback() {
         const name = this.getAttribute('name') || 'Untitled';
+        const date = this.getAttribute('date') || '';
         const desc = this.getAttribute('description') || '';
         const skills = (this.getAttribute('skills') || '')
           .split(',')
@@ -148,6 +297,7 @@
           .filter(s => s);
 
         this._titleEl.textContent = name;
+        this._dateEl.textContent = date;
         this._descEl.textContent = desc;
         this._skillsEl.innerHTML = skills
           .map(skill => `<li>${skill}</li>`)
@@ -156,6 +306,19 @@
     }
 
     customElements.define('project-card', ProjectCard);
+    
+    // Toggle projects visibility
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggleButton = document.getElementById('toggleProjects');
+      const projectsContent = document.getElementById('projectsContent');
+      
+      toggleButton.addEventListener('click', function() {
+        projectsContent.classList.toggle('hidden');
+        toggleButton.textContent = projectsContent.classList.contains('hidden') 
+          ? 'Show My Projects' 
+          : 'Hide Projects';
+      });
+    });
   </script>
 </body>
 </html>
