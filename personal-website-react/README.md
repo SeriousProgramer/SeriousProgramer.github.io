@@ -1,49 +1,116 @@
-# Getting Started with Create React App
+# Rohit Binu - Personal Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based personal portfolio website showcasing projects and skills in software development, with resume download functionality.
+
+## Features
+
+- Responsive design with Darcula-inspired dark theme
+- Project showcase with toggle functionality  
+- Resume download link with attractive styling
+- Clean, professional layout using JetBrains Mono font
+- Optimized for GitHub Pages deployment
+- Automatic deployment with GitHub Actions
+
+## Local Development
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser
+
+## Deployment to GitHub Pages
+
+### Prerequisites
+1. Create a new repository on GitHub (e.g., `personal-website-react`)
+2. Update the `homepage` field in `package.json` with your GitHub Pages URL:
+   ```json
+   "homepage": "https://yourusername.github.io/personal-website-react"
+   ```
+
+### Automatic Deployment (Recommended)
+This project includes a GitHub Actions workflow that automatically deploys to GitHub Pages when you push to the main branch.
+
+1. Push your code to GitHub:
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git remote add origin https://github.com/yourusername/personal-website-react.git
+   git push -u origin main
+   ```
+
+2. Enable GitHub Pages in your repository settings:
+   - Go to Settings → Pages
+   - Source: Deploy from a branch
+   - Branch: gh-pages / (root)
+
+The site will automatically deploy whenever you push changes to the main branch.
+
+### Manual Deployment
+You can also deploy manually using:
+```bash
+npm run deploy
+```
+
+## Resume Download
+
+The website includes a resume download feature. To update your resume:
+
+1. Replace `public/Rohit_Binu_Resume.pdf` with your own resume file
+2. Update the filename in the download link in `src/App.js` if needed
+3. Redeploy the site
 
 ## Available Scripts
 
-In the project directory, you can run:
+- `npm start` - Runs the app in development mode
+- `npm run build` - Builds the app for production
+- `npm test` - Launches the test runner
+- `npm run deploy` - Builds and deploys to GitHub Pages (manual)
+- `npm run predeploy` - Runs automatically before deploy
 
-### `npm start`
+## Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+src/
+  components/
+    ProjectCard.js      # Individual project card component
+    ProjectCard.css     # Styles for project cards
+  App.js               # Main application component
+  App.css              # Main application styles
+  index.js             # React DOM entry point
+  index.css            # Global styles
+public/
+  Rohit_Binu_Resume.pdf # Resume file for download
+  index.html           # HTML template
+.github/
+  workflows/
+    deploy.yml          # GitHub Actions deployment workflow
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Customization
 
-### `npm test`
+To customize the website for your own use:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Update the personal information in `src/App.js`
+2. Replace the projects array with your own projects
+3. Replace `public/Rohit_Binu_Resume.pdf` with your resume
+4. Modify the homepage URL in `package.json`
+5. Update this README with your own information
 
-### `npm run build`
+## Technologies Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- React 19.1.0
+- CSS3 with custom Darcula-inspired theme
+- JetBrains Mono font
+- GitHub Pages for hosting
+- GitHub Actions for CI/CD
+- gh-pages for deployment automation
 
 ### Code Splitting
 

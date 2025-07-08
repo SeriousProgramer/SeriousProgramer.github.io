@@ -13,7 +13,7 @@ function App() {
     {
       name: "Portfolio Website",
       date: "May 2025 - Present",
-      skills: "HTML, CSS, JavaScript",
+      skills: "React, HTML, CSS, JavaScript",
       description: "A website built to showcase my professional work and technical skills."
     },
     {
@@ -106,6 +106,8 @@ function App() {
     <div className="App">
       <header>
         <h1>Rohit Binu</h1>
+        <p className="title">Full Stack Developer</p>
+        <p className="location">Veldhoven, Netherlands</p>
       </header>
 
       <section id="about">
@@ -113,6 +115,64 @@ function App() {
           Hi—I'm <strong>Rohit Binu</strong>, a final year computer-science student and junior software
           engineer based in Noord Brabant. I'm passionate about creating software solutions to real world problems.
         </p>
+        
+        <ul className="contact-links">
+          <li>
+            <a 
+              href="/Rohit_Binu_Resume.pdf" 
+              download="Rohit_Binu_Resume.pdf"
+              className="contact-link"
+            >
+              📄 CV
+            </a>
+          </li>
+          <li>
+            <a 
+              href="tel:+31645138773"
+              className="contact-link"
+            >
+              📞 +31 6 45 13 87 73
+            </a>
+          </li>
+          <li>
+            <a 
+              href="mailto:mail.rohit.binu@gmail.com"
+              className="contact-link"
+            >
+              ✉️ mail.rohit.binu@gmail.com
+            </a>
+          </li>
+          <li>
+            <a 
+              href="https://seriousprogramer.github.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-link"
+            >
+              🌐 seriousprogramer.github.io (YOU ARE HERE)
+            </a>
+          </li>
+          <li>
+            <a 
+              href="https://github.com/SeriousProgramer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-link"
+            >
+              💻 GitHub
+            </a>
+          </li>
+          <li>
+            <a 
+              href="https://linkedin.com/in/rohit-binu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-link"
+            >
+              💼 LinkedIn
+            </a>
+          </li>
+        </ul>
       </section>
 
       <section id="projects">
