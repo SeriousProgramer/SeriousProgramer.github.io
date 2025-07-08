@@ -1,0 +1,58 @@
+/* project-card component */
+.project-card {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.project-card .card {
+  background-color: #313335; /* panel background */
+  border: 1px solid #515151; /* panel border */
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.project-card .card h3 {
+  margin-top: 0;
+  color: #629755; /* strings */
+}
+
+.project-card .card .date {
+  color: #9876AA; /* variables */
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-card .description {
+  color: #A9B7C6;
+  margin: 0.5rem 0 1rem;
+}
+
+.project-card .skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-card .skills-list li {
+  background-color: #3C3F41; /* badge bg */
+  border: 1px solid #515151;
+  border-radius: 4px;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.9rem;
+  color: #A9B7C6;
+}
+
+/* Skills label */
+.project-card .skills-section {
+  margin-top: 0.5rem;
+}
+
+.project-card .skills-label {
+  font-weight: bold;
+  color: #BBB529; /* annotation color */
+  margin-right: 0.5rem;
+}

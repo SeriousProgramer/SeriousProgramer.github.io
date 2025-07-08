@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+/* -- Darcula Base -- */
+.App {
+  background-color: #2B2B2B;
+  color: #A9B7C6;
+  font-family: 'JetBrains Mono', monospace;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #515151;
+  padding-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: #FFC66D; /* class names */
+}
+
+/* About */
+#about p {
+  margin-bottom: 3rem;
+  color: #A9B7C6; /* default text */
+}
+
+/* Section titles */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #CC7832; /* keywords */
+  border-bottom: 1px solid #515151;
+  padding-bottom: 0.3rem;
+}
+
+/* Links */
+a {
+  color: #589DF6; /* link color */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Hide content */
+.hidden {
+  display: none;
+}
+
+/* Button styles */
+.toggle-btn {
+  background-color: #3C3F41;
+  color: #A9B7C6;
+  border: 1px solid #515151;
+  border-radius: 4px;
+  padding: 0.7rem 1.2rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.toggle-btn:hover {
+  background-color: #515151;
+}
+
+.toggle-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #589DF6;
+}

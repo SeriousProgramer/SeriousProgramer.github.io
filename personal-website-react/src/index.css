@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  background-color: #2B2B2B;
+  color: #A9B7C6;
+  font-family: 'JetBrains Mono', monospace, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'JetBrains Mono', monospace, source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
