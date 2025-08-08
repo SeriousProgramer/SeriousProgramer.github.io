@@ -19,13 +19,13 @@ function App() {
     {
       name: "BunqBibble: Travel Safety AI Agent",
       date: "May 2025",
-      skills: "LangChain, llama-3_3-nemotron-super-49b, Flask, Expo, AI, RSS Integration, API Integration",
+      skills: "Python, LangChain, llama-3_3-nemotron-super-49b, Flask, Expo, AI, RSS Integration, API Integration",
       description: "An AI agent that helps travelers stay safe in new cities by analyzing news feeds, HoodMaps data, and banking patterns. I collaborated with a team at the bunq AI Agent Hackathon to build this solution in 24 hours, focusing on the LangChain implementation and API integrations to provide reliable safety assessments for travelers worldwide."
     },
     {
       name: "EduPilot DevOps",
       date: "March 2025 - Present",
-      skills: "Docker, GitLab CI/CD, Linux, High-Performance Computing",
+      skills: "Docker, Python, GitLab CI/CD, Linux, High-Performance Computing",
       description: "EduPilot is a large language model focused on education deployed on TU/e's High-Performance Cluster. I configured the Docker environment for the model and backend, set up the CI/CD pipeline using GitLab, and managed the deployment on the university's computing infrastructure."
     },
     {
@@ -37,7 +37,7 @@ function App() {
     {
       name: "Transport and Logistics Game",
       date: "August 2024 - Present",
-      skills: "PHP, Laravel, Blade, Bootstrap, HTML, SQL, Nginx, Plesk, Git",
+      skills: "PHP, Laravel, JavaScript, Blade, Bootstrap, HTML, SQL, Nginx, Plesk, Git",
       description: "A web-based simulation game for TU Eindhoven students to learn transport and logistics concepts. I developed the full stack implementation including user authentication, real-time communication features, PDF generation, and deployed the solution on Nginx via Plesk."
     },
     {
