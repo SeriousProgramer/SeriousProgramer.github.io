@@ -112,8 +112,8 @@ function App() {
 
       <section id="about">
         <p>
-          Hi—I'm <strong>Rohit Binu</strong>, a final year computer-science student and junior software
-          engineer based in Noord Brabant. I'm passionate about creating software solutions to real world problems.
+          Hi—I'm <strong>Rohit Binu</strong>, a junior software
+          engineer at XIMIUS based in Noord Brabant. I'm passionate about creating software solutions to real world problems.
         </p>
         
         <ul className="contact-links">
@@ -124,14 +124,6 @@ function App() {
               className="contact-link"
             >
               📄 CV
-            </a>
-          </li>
-          <li>
-            <a 
-              href="tel:+31645138773"
-              className="contact-link"
-            >
-              📞 +31 6 45 13 87 73
             </a>
           </li>
           <li>
